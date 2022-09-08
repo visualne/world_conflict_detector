@@ -13,16 +13,13 @@ dbname = client['world']
 #Define Collection
 collection = dbname['factbook']
 
-
-
 # Create your views here.
 def index(request):
 
+    conflict_details = collection.find({},{'Government':{'Country name':1},
+        'Transnational Issues':{'Disputes - international':1}})
 
-    mascot_details = collection.find({})
-
-    for r in mascot_details:
+    for r in conflict_details:
         print(r)
-
 
     return HttpResponse("<h1>Hello Ed, and welcome to my first <u>Django App</u> project!</h1>")
