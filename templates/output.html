@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conflicts</title>
+</head>
+<body>
+  <h1>Conflicts</h1>
+
+{% for key, value in context.items %}
+    <p><b>{{ key }}:</b></p>
+    <p>{% autoescape off %}{{ value }}{% endautoescape %} </p>
+{% endfor %}
+</body>
+</html>
