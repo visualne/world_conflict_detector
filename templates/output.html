@@ -6,9 +6,12 @@
 <body>
   <h1>Conflicts</h1>
 
-{% for key, value in context.items %}
+{% for key, value in context %}
     <p><b>{{ key }}:</b></p>
     <p>{% autoescape off %}{{ value }}{% endautoescape %} </p>
 {% endfor %}
+
+
+
 </body>
 </html>
